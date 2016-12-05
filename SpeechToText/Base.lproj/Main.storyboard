@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeechToText" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有什么需要帮助的么?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQO-GY-7U2">
+                                <rect key="frame" x="90.5" y="40" width="194" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" text="说点啥呗" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Eou-zR-dgp">
+                                <rect key="frame" x="67" y="104" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8sR-29-VDq"/>
+                                    <constraint firstAttribute="height" constant="128" id="bEs-GX-EcR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k97-CM-VTe">
+                                <rect key="frame" x="156" y="382" width="62" height="30"/>
+                                <state key="normal" title="开始说话"/>
+                                <connections>
+                                    <action selector="speakAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kqx-C8-PZt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="k97-CM-VTe" firstAttribute="top" secondItem="Eou-zR-dgp" secondAttribute="bottom" constant="150" id="LR1-GN-ybB"/>
+                            <constraint firstItem="k97-CM-VTe" firstAttribute="centerX" secondItem="Eou-zR-dgp" secondAttribute="centerX" id="NKB-dg-wGT"/>
+                            <constraint firstItem="Eou-zR-dgp" firstAttribute="centerX" secondItem="NQO-GY-7U2" secondAttribute="centerX" id="O6h-jK-aY5"/>
+                            <constraint firstItem="NQO-GY-7U2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sya-lU-hud"/>
+                            <constraint firstItem="NQO-GY-7U2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="aFF-d4-QBa"/>
+                            <constraint firstItem="Eou-zR-dgp" firstAttribute="top" secondItem="NQO-GY-7U2" secondAttribute="bottom" constant="40" id="bxA-nu-fWb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="speakerBtn" destination="k97-CM-VTe" id="EKN-9h-0Nl"/>
+                        <outlet property="textView" destination="Eou-zR-dgp" id="pdr-2M-ac0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="-322"/>
+        </scene>
+    </scenes>
+</document>
